@@ -1,15 +1,23 @@
+
+//Variables can be stored in here by doing this.
+//Howver things need to be in the prototype if they are to be inherited.
 function Entity(){
-  this.x = this.y = 10;
+
 }
 
 Entity.prototype = {
+  x: 10,
+  y: 10,
+  width: 10,
+  height: 10,
+
   move: function(x, y){
-    console.log("moving");
     this.x += x;
     this.y += y;
   },
+
   draw: function(ctx){
-    ctx.fillRect(this.x, this.y, 10, 10);
+    ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 };
 
